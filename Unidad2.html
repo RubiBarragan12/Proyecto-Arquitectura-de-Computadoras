@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        h1 {
+            color: #333;
+        }
+
+        button {
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        #mensajeConfirmacion {
+            display: none;
+            background-color:hotpink;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Unidad 2 Estructura y funcionamiento de la CPU</h1>
+    <h2>2.1 Organización del procesador </h2>
+   <p>Un  procesador,  incluye  tanto  registros  visibles  
+     por  el  usuario  como  registros  de control/estado. 
+     Los registros  visibles por el usuario pueden  ser de 
+     uso general o tener una utilidad especial, mientras que 
+     los registros de control y estado se usan para  controlar 
+     el funcionamiento del procesador, un claro ejemplo es el 
+     contador de programa.  Los  procesadores  utilizan  la  
+     segmentación  de  instrucciones  para  acelerar  la 
+     ejecución.  La segmentación de cauce se puede dividir en 
+     ciclo de instrucción en varias etapas separadas que 
+     operan secuencialmente, tales como la captación de instrucción, 
+     decodificación  de  instrucción,  cálculo  de  direcciones 
+     de  operando, ejecución de instrucción y estructura del 
+     operando resultado.</p>
+ 
+     <h2>2.2 Estructura de registros </h2>
+   <p>El Registro está  organizado en una estructura jerárquica 
+     compuesta por subárboles con sus respectivas claves, 
+     subclaves y entradas. El contenido del Registro puede 
+     variar considerablemente de un equipo a otro, en función 
+     de los dispositivos, servicios y programas instalados en 
+     cada equipo. Las claves pueden contener subclaves que, a 
+     su vez, pueden contener otras subclaves. Aunque  la  mayor 
+     parte  de  la  información  del  Registro  se  almacena  
+     en  disco  y  se considera  permanente,  algunos  datos  
+     almacenados  en claves  volátiles se  sobrescriben cada 
+     vez que se inicia el sistema operativo. </p>
+ 
+     <h2>2.2.1 Registros visibles para el usuario </h2>
+   <p>Minimizan el acceso entre el microprocesador y cpu, 
+     debido a que se encuentran dentro del CPU, son manipulables 
+     por lenguaje de máquina. Aquí tenemos los 2 principales:</p>
+   <p>1 Registros de Datos. (Manipulables a bajo nivel). </p>
+   <p>2 Registro de Direcciones (Manipulables a bajo nivel). </p>
+   <p>• Registro de índice</p>
+   <p>Sirve  para  direccionamiento,  es  similar  al  “PC”,  
+     pero  tiene  un  valor  base  de autoincremento:  Ejemplo: 
+      Base  3   3,  6,  9…n,  n+1;  que  se  irá  sumando  para 
+      obtener una dirección más efectiva. </p>
+ 
+   
+     <h2>2.2.2 Registros de control y de estados </h2>
+     <p>Hay  diversos  registros  del  procesador  que  se  
+       emplean  para  controlar  su funcionamiento. La mayoría 
+       de ellos, en la mayor parte de las máquinas, no son 
+       visibles  por  el  usuario.  Algunos  de  ellos  pueden  
+       ser  visibles  por  ciertas instrucciones máquina 
+       ejecutadas en un modo de controlo de sistema operativo</p>
+     <p>Naturalmente, máquinas diferentes tendrán distintas 
+       organizaciones de registros y usarán distinta terminología. 
+       A continuación se presenta una lista razonablemente completa 
+       de tipos de registros, con una breve descripción.</p>
+       <img src="C:\Users\barra\OneDrive\Documentos\Arquitectura de Computadoras\regis.jpeg" alt="Imagen 3">
+   
+       <h2>2.2.3  Ejemplos  de  organización  de  registros  de   
+          CPU reales</h2>
+       <p>En  algún  diseño  concreto  de  procesador  es  
+         posible  encontrar  otros  registros relativos a 
+         estado y control. Puede existir un puntero a un 
+         bloque de memoria que contenga  información  de  
+         estado  adicional  (por  ejemplo,  bloques  de  
+         control  de procesos). En las máquinas que usan 
+         interrupciones vectorizadas puede existir un registro 
+         de  vector de interrupción. Si se utiliza una pila para 
+         llevar a cabo ciertas funciones  (por  ejemplo,  llamada  
+         a  subrutina),  se  necesita un  puntero  de  pila  del 
+         sistema.  </p>
+         <p>Una  cuestión  primordial  es  el  soporte  del  sistema  
+             operativo.  Algunos  tipos  de información  de  control 
+             son  de  utilidad  específica  para el  sistema  
+             operativo.  Si el diseñador del procesador posee una 
+             comprensión funcional del sistema operativo que se va a 
+             utilizar, la organización de los registros puede adaptarse 
+             hasta cierto punto a ese sistema operativo</p>
+ 
+ 
+   <h2>2.3 El ciclo de instrucción </h2>
+   <h3>2.3.1 Ciclo Fetch-Decode-Execute </h3>
+   <p>Un ciclo  de  instrucción (también  llamado  ciclo  de 
+     fetch-and-execute o  ciclo de fetch-decode-execute en  
+     inglés)  es  el  período  que  tarda  la  unidad  
+     central  de proceso (CPU) en ejecutar una instrucción 
+     delenguaje máquina. Comprende  una  secuencia  de  
+     acciones  determinada  que  debe  llevar  a  cabo  la 
+     CPU para ejecutar cada instrucción en un programa. 
+     Cada instrucción del juego de instrucciones de una CPU 
+     puede requerir diferente número de ciclos de instrucción 
+     para  su  ejecución.  Un  ciclo  de  instrucción  está  
+     formado  por  uno  o  más ciclos máquina. </p>
+     <img src="C:\Users\barra\OneDrive\Documentos\Arquitectura de Computadoras\ciclo.jpeg" alt="Imagen 3">
+ 
+     <h2>2.3.2 Segmentación de instrucciones </h2>
+     <h3>2.3.3  Conjunto  de  instrucciones:  Características 
+      y funciones</h3>
+     <p>La segmentación de instrucciones es similar al uso de 
+     una cadena de montaje en una  fábrica  de  manufacturación.  
+     En  las cadenas de  montaje,  el  producto  pasa  a través 
+     de varias etapas de producción antes de tener el producto 
+     terminado. Cada etapa  o  segmento  de  la  cadena  está  
+     especializada  en  un  área  específica  de  la línea de 
+     producción y lleva a cabo siempre la misma actividad. 
+     Esta tecnología es aplicada en el diseño de procesadores 
+     eficientes.</p>
+     <p>A  estos  procesadores  se  les  conoce  como  pipeline  
+         processors.  Estos  están compuestos  por  una  lista  
+         de  segmentos  lineales  y  secuenciales  en  donde  cada 
+         segmento lleva a cabo una tarea o un grupo de tareas 
+         computacionales. Los datos que  provienen  del  exterior  
+         se  introducen  en  el  sistema  para  ser  procesados.  
+         La computadora  realiza  operaciones  con  los  datos  
+         que  tiene  almacenados en memoria, produce nuevos datos 
+         o información para uso externo. </p>
+ 
+ 
+ 
+         <h2>2.3.4 Modos de direccionamiento y formatos</h2>
+         <p>El  campo  de  operación  de  una  instrucción  especifica  
+         la  operación  que  se  debe realizar. Esta  debe  ser 
+         ejecutada  sobre  algunos  datos  almacenados  en  
+         registros del computador o en palabras de memoria, 
+         es decir, sobre los operandos. El modo de direccionamiento
+         especifica la forma de interpretar la información contenida 
+         en cada campo de operando para localizar, en base a esta 
+         información, el operando.</p>
+         <img src="C:\Users\barra\OneDrive\Documentos\Arquitectura de Computadoras\nodos.jpeg" alt="Imagen 3">
+</body>
+</html>
+

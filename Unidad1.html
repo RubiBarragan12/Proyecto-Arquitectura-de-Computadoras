@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        h1 {
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        #volverBtn {
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        #completadas {
+            margin-top: 20px;
+        }
+
+        #completadas h2 {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+   <h1>Unidad 1 Modelo de arquitectura de Computo</h1>
+    <h2>1.1 Modelos de arquitecturas de cómputo</h2>
+      <h2>1.1.1 Arquitecturas Clásicas</h2>
+   <p>Estas arquitecturas se desarrollaron en las primeras 
+     computadoras electromecánicas y de tubos de vacío. 
+     Aun son usadas en procesadores empotrados de gama baja 
+     y son la base de la mayoría de las arquitecturas modernas.
+     Esta arquitectura fue utilizada en la computadora ENIAC.
+      Consiste en una unidad central de proceso que se comunica 
+      a través de un solo bus con un banco de memoria en donde se
+     almacenan tanto los códigos de instrucción del programa,
+     como los datos que serán procesados por este. 
+     Esta arquitectura es la más empleada en la actualidad
+     ya, que es muy versátil. Ejemplo de esta versatilidad
+     es el funcionamiento de los compiladores, los cuales
+     son programas que toman como entrada un archivo de 
+     texto conteniendo código fuente y generan como datos
+     de salida, el código maquina que corresponde a dicho
+     código fuente (Son programas que crean o modifican otros
+      programas). Estos datos de salida pueden ejecutarse 
+      como un programa posteriormente ya que se usa lamisma 
+      memoria para datos y para el código del programa.
+ </p>
+     <img src="C:\Users\barra\OneDrive\Documentos\Arquitectura de Computadoras\UN1.jpeg" alt="Imagen 1">
+ 
+   <h2>1.1.2 Arquitecturas Segmentadas</h2>
+   <p>Las arquitecturas segmentadas o con segmentación del
+     cauce buscan mejorar el desempeño realizando paralelamente 
+     varias etapas del ciclo de instrucción al mismo tiempo.
+     El procesador se divide en varias unidades funcionales
+     independientes y se dividen entre ellas el procesamiento
+     de las instrucciones. ParaProcesador Memoria de datos Entrada
+     y salidaBus dedatosMemoria deprograma Bus deprogramaRegistrosALUUnidad
+     de Control comprender mejor esto, supongamos  que un procesador
+     simple tiene un ciclo de instrucción sencillo consistente 
+     solamente en una etapa de búsqueda del código de instrucción
+     y en otra etapa de ejecución de la instrucción. 
+     En un procesador sin segmentación del cauce, las dos etapas
+     se realizarían de manera secuencial para cada una de la 
+     instrucciones, como lo muestra la siguiente figura.</p>
+   <img src="C:\Users\barra\OneDrive\Documentos\Arquitectura de Computadoras\img.jpeg" alt="Imagen 1">
+   <p>En un procesador con segmentación del cause, cada una de
+     estas etapas se asigna a una unidad funcional diferente, 
+     la búsqueda a la unidad de búsqueda y la ejecución a la 
+     unidad de ejecución. Estas unidades pueden trabajar en 
+     forma paralela en instrucciones diferentes. Estas unidades
+     se comunican por medio de una cola de instrucciones en la
+     que la unidad de búsqueda coloca los códigos de instrucción 
+     que leyó para que la unidad de ejecución los tome de la cola 
+     y los ejecute. Esta cola se parece a un tubo donde las instrucciones 
+     entran por un extremo y salen por el otro. De esta analogía 
+     proviene el nombre en ingles: Pipelining o entubamiento.</p>
+ 
+ 
+ 
+   <h2>1.1.3 Arquitecturas  de multiprocesamiento.</h2>
+   <p>Cuando se desea incrementar el desempeño más aya de lo que permite la 
+     técnica de segmentación del cauce (limite teórico de una 
+     instrucción por ciclo de reloj), se requiere utilizar más 
+     de un procesador para la ejecución del programa de aplicación.</p>
+   <p>Procesadores vectoriales – Son computadoras pensadas 
+     para aplicar un mismo algoritmo numérico a una serie de 
+     datos matriciales, en especial en la simulación de sistemas 
+     físicos complejos, tales como simuladores para predecir el 
+     clima, explosiones atómicas, reacciones químicas complejas, 
+     etc., donde los datos son representados como grandes números 
+     de datos en forma matricial sobre los que se deben se aplicar 
+     el mismo algoritmo numérico</p>
+     <img src="C:\Users\barra\OneDrive\Documentos\Arquitectura de Computadoras\multi.jpeg"alt="Imagen 2">
+ 
+   <h2>1.2 Análisis de los componentes.</h2>
+   <h3>1.2.1 CPU.</h3>
+   <h4> 1.2.1.1 Arquitecturas</h4>
+   <p>Ademas de las arquitecturas clásicas mencionadas anteriormente, 
+     en la actualidad han aparecido arquitecturas híbridas 
+     entre la Von Newman y la Harvard, buscando conservar la 
+     flexibilidad, pero mejorando el rendimiento. Uno de los 
+     cambios más importante de los últimos años en diseño de 
+     las computadoras se dio durante </p>
+ 
+   <h2>1.2.1.2 Tipos.</h2>
+   <p>Los CPUs modernos pueden clasificarse de acuerdo a varias 
+     características, tales como: el tamaño del ALU o del Bus 
+     de conexión al exterior (8, 16, 32, 64 bits),si tienen 
+     cauce segmentado o no segmentado, si con tipo CISC o 
+     RISC, Von Newan o Harvard y  si solo tienen instrucciones 
+     enteras o implementan también instrucciones de punto flotante.</p>
+   
+ 
+ 
+   <h2>1.2.1.3 Características</h2>
+   <p>Las características más importantes a considerar al escoger 
+     un CPU para usarlo en una aplicación,son: 
+     <p>•Modelo del 
+     programador (Conjunto de registros que el programador 
+     puede utilizar), forman el modelo mental del CPU que el 
+     programador utiliza al programar en ensamblador</p>
+     <p>.•Conjunto 
+     de instrucciones que puede ejecutar el CPU</p>
+     <p>•Modos de direccionamiento 
+     que pueden usarse para obtener los operandos de las instrucciones.
+     <p>•Ciclo de instrucción (el conjunto de pasos que realiza 
+     el CPU para procesar cada instrucción)</p>
+     <p>•Buses de interconexión, 
+     usados para que el CPU lea y escriba a la memoria y a los 
+     dispositivos de entrada y salid </p>
+ 
+ 
+   <h2>1.2.1.4 Funcionamiento</h2>
+   <p>Debido a la gran variedad de CPU disponibles comercialmente, 
+     se explicara el funcionamiento de un unidad central de 
+     proceso imaginaria muy simple, pero que resume el funcionamiento 
+     básico de la mayoría de los CPUs. Este CPU es similar a 
+     las primeras computadoras existentes en los años 1950s 
+     (Basado en el diseño explicado en Mano, M. Morris. 
+     Arquitectura de computadoras. Pearson 1994).</p>
+     <p>1-Búsqueda del código de Instrucción. Esta consiste 
+         en leer de la memoria cual será la siguiente instrucción 
+         a ejecutar, la cual esta almacenada en forma de un código 
+         numérico que indica cual de todaslas operaciones que puede 
+         realizar el CPU sera la siguiente y con que operandos se 
+         ejecutara</p>
+      <p>2- Decodificación. Consiste en tomar el código numérico 
+         e identificar a cual de las operaciones que puede 
+         realizar el CPU corresponde dicho código. El proceso 
+         contrario, la codificación, consiste en conociendo la 
+         instrucción, determinar el número que la va a representar. 
+         Esta etapa usualmente se realiza con un decodificador 
+         binario</p>   
+     <p>3- Ejecución. En esta etapa se lleva a cabo la operación 
+         sobre los datos que se vallan a procesar. En general, la 
+         unidad de control (CU) genera las señales de control necesarias 
+         para llevar los datos a las entradas de la Unidad Aritmética 
+         Lógica, la cual efectuará las operaciones aritméticas y lógicas. 
+         Posteriormente, la unidad de control generara las señales 
+         de control necesarias para transferir la salida de la Unidad 
+         Aritmética Lógica al registro donde serán almacenados los r
+         esultados para su uso posterior </p>
+   <img src="C:\Users\barra\OneDrive\Documentos\Arquitectura de Computadoras\funci.jpeg" alt="Imagen 3">
+    
+</body>
+</html>
